@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Consulta - Plano de Mobilidade Urbana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Adicionando a fonte Poppins para corresponder ao design */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-white text-gray-800 shadow-sm border-b">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-2">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <img src="logo-mpap.png" alt="Logo MPAP" class="h-14">
+                    <div>
+                        <div class="font-bold text-[#0c2b7a] text-lg">Consulta MPAP</div>
+                        <div class="text-xs text-gray-600">Ministério Público do Amapá</div>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="consulta-tela.html"
+                        class="text-gray-700 hover:text-[#0c2b7a] transition font-medium">Consultas Públicas</a>
+                    <a href="#" class="text-gray-700 hover:text-[#0c2b7a] transition font-medium">Sobre</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto py-12 px-4 sm:px-8">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex items-center gap-2 text-sm">
+                <li><a href="consulta-tela.html" class="text-gray-500 hover:text-[#0c2b7a]">Início</a></li>
+                <li><span class="text-gray-400">/</span></li>
+                <li><a href="consulta-tela.html" class="text-gray-500 hover:text-[#0c2b7a]">Consultas Públicas</a></li>
+                <li><span class="text-gray-400">/</span></li>
+                <li class="text-gray-700 font-medium">Plano Municipal de Mobilidade Urbana</li>
+            </ol>
+        </nav>
+
+        <!-- Título e Descrição da Consulta -->
+        <h1 class="text-3xl font-bold mb-4 text-gray-800">Plano Municipal de Mobilidade Urbana</h1>
+        <p class="mb-6 text-lg text-gray-600">Participe da construção do novo plano de mobilidade urbana para tornar a
+            cidade mais acessível e sustentável.</p>
+
+        <!-- Metadados da Consulta -->
+        <div class="mb-10 flex flex-wrap gap-x-8 gap-y-2 text-sm text-gray-500">
+            <div><span class="font-semibold text-gray-700">Unidade Responsável:</span> Secretaria de Mobilidade Urbana
+            </div>
+            <div><span class="font-semibold text-gray-700">Categoria:</span> Transporte</div>
+            <div><span class="font-semibold text-gray-700">Período:</span> 01/07/2024 a 31/07/2024</div>
+        </div>
+
+        <!-- Lista de Perguntas da Consulta -->
+        <div class="mb-10 border-t border-b border-gray-200 py-6">
+            <h3 class="text-base font-semibold text-gray-800 mb-3">Perguntas em discussão nesta consulta:</h3>
+            <ul class="list-decimal list-outside pl-5 space-y-2 text-gray-600 text-sm">
+                <li>O que você acha desta proposta?</li>
+                <li>Como podemos melhorar?</li>
+                <li>Você tem sugestões adicionais?</li>
+            </ul>
+        </div>
+
+        <!-- Box de Documento -->
+        <div class="bg-gray-50 p-4 rounded-lg mb-12 border border-gray-200">
+            <div class="flex items-start">
+                <div class="text-gray-500 mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-800 mb-1">Documento de Referência</p>
+                    <p class="text-xs text-gray-600 mb-3">Acesse o documento completo para obter mais informações sobre
+                        esta consulta pública.</p>
+                    <button
+                        class="text-sm bg-white border border-gray-300 rounded px-4 py-1 hover:bg-gray-100 transition font-medium text-gray-700">
+                        Baixar Documento
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Perguntas -->
+        <h2 class="text-2xl font-bold mb-8 text-[#0c2b7a]">Perguntas da Consulta Pública</h2>
+        <div class="space-y-12">
+            <!-- Pergunta 1 -->
+            <section>
+                <div class="border-l-4 border-[#1e40af] pl-4 mb-6">
+                    <div class="text-sm font-medium text-[#1e40af]">Pergunta 1</div>
+                    <div class="text-xl font-bold text-gray-800">O que você acha desta proposta?</div>
+                </div>
+
+                <!-- Respostas -->
+                <div class="space-y-5 ml-4 sm:ml-8">
+                    <!-- Resposta Maria -->
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex-shrink-0 h-9 w-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-medium text-sm mt-1">
+                            M</div>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-700 text-sm">Maria Silva</span>
+                                <span class="text-xs text-gray-400">30 de junho de 2025 às 12:54</span>
+                            </div>
+                            <div class="bg-gray-100 rounded-md px-4 py-2 mt-1 text-gray-800 border border-gray-200/80">
+                                É uma boa iniciativa.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Resposta João -->
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex-shrink-0 h-9 w-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-medium text-sm mt-1">
+                            J</div>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-700 text-sm">João Souza</span>
+                                <span class="text-xs text-gray-400">01 de julho de 2025 às 09:15</span>
+                            </div>
+                            <div class="bg-gray-100 rounded-md px-4 py-2 mt-1 text-gray-800 border border-gray-200/80">
+                                Tenho dúvidas.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário para Novo Comentário (Oculto) -->
+                <form id="new-comment-form-1" class="hidden mt-6 ml-4 sm:ml-8">
+                    <label for="comment-textarea-1" class="block text-sm font-medium text-gray-700 mb-2">Seu
+                        comentário</label>
+                    <textarea id="comment-textarea-1" class="w-full p-2 border border-gray-300 rounded-md text-sm"
+                        rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
+                    <div class="flex justify-end gap-2 mt-2">
+                        <button type="button"
+                            class="cancel-comment-button text-sm text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 font-medium">Cancelar</button>
+                        <button type="submit"
+                            class="submit-comment-button text-sm bg-[#0c2b7a] text-white px-5 py-2 rounded-md hover:bg-[#1e40af] font-medium">Enviar
+                            Comentário</button>
+                    </div>
+                </form>
+
+                <!-- Botão para Adicionar Comentário -->
+                <div class="add-comment-container mt-6 ml-4 sm:ml-8 border-t pt-4">
+                    <button class="add-comment-button text-[#1e40af] hover:underline text-sm font-semibold">
+                        Comentar
+                    </button>
+                </div>
+            </section>
+
+            <!-- Pergunta 2 -->
+            <section>
+                <div class="border-l-4 border-[#1e40af] pl-4 mb-6">
+                    <div class="text-sm font-medium text-[#1e40af]">Pergunta 2</div>
+                    <div class="text-xl font-bold text-gray-800">Como podemos melhorar?</div>
+                </div>
+                <!-- Respostas -->
+                <div class="space-y-5 ml-4 sm:ml-8">
+                    <div class="italic text-gray-500 text-sm">Nenhum comentário ainda.</div>
+                </div>
+                <!-- Formulário para Novo Comentário (Oculto) -->
+                <form id="new-comment-form-2" class="hidden mt-6 ml-4 sm:ml-8">
+                    <label for="comment-textarea-2" class="block text-sm font-medium text-gray-700 mb-2">Seu
+                        comentário</label>
+                    <textarea id="comment-textarea-2" class="w-full p-2 border border-gray-300 rounded-md text-sm"
+                        rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
+                    <div class="flex justify-end gap-2 mt-2">
+                        <button type="button"
+                            class="cancel-comment-button text-sm text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 font-medium">Cancelar</button>
+                        <button type="submit"
+                            class="submit-comment-button text-sm bg-[#0c2b7a] text-white px-5 py-2 rounded-md hover:bg-[#1e40af] font-medium">Enviar
+                            Comentário</button>
+                    </div>
+                </form>
+                <!-- Botão para Adicionar Comentário -->
+                <div class="add-comment-container mt-6 ml-4 sm:ml-8 border-t pt-4">
+                    <button class="add-comment-button text-[#1e40af] hover:underline text-sm font-semibold">
+                        Comentar
+                    </button>
+                </div>
+            </section>
+
+            <!-- Pergunta 3 -->
+            <section>
+                <div class="border-l-4 border-[#1e40af] pl-4 mb-6">
+                    <div class="text-sm font-medium text-[#1e40af]">Pergunta 3</div>
+                    <div class="text-xl font-bold text-gray-800">Você tem sugestões adicionais?</div>
+                </div>
+                <!-- Respostas -->
+                <div class="space-y-5 ml-4 sm:ml-8">
+                    <div class="italic text-gray-500 text-sm">Nenhum comentário ainda.</div>
+                </div>
+                <!-- Formulário para Novo Comentário (Oculto) -->
+                <form id="new-comment-form-3" class="hidden mt-6 ml-4 sm:ml-8">
+                    <label for="comment-textarea-3" class="block text-sm font-medium text-gray-700 mb-2">Seu
+                        comentário</label>
+                    <textarea id="comment-textarea-3" class="w-full p-2 border border-gray-300 rounded-md text-sm"
+                        rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
+                    <div class="flex justify-end gap-2 mt-2">
+                        <button type="button"
+                            class="cancel-comment-button text-sm text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 font-medium">Cancelar</button>
+                        <button type="submit"
+                            class="submit-comment-button text-sm bg-[#0c2b7a] text-white px-5 py-2 rounded-md hover:bg-[#1e40af] font-medium">Enviar
+                            Comentário</button>
+                    </div>
+                </form>
+                <!-- Botão para Adicionar Comentário -->
+                <div class="add-comment-container mt-6 ml-4 sm:ml-8 border-t pt-4">
+                    <button class="add-comment-button text-[#1e40af] hover:underline text-sm font-semibold">
+                        Comentar
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal de Confirmação (Oculto) -->
+    <div id="confirmation-modal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl p-6 sm:p-8 max-w-sm mx-auto text-center">
+            <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-lg leading-6 font-medium text-gray-900 mt-4">Comentário Enviado para Moderação</h3>
+            <div class="mt-2 px-4 text-sm text-gray-600">
+                <p>Seu comentário foi enviado com sucesso. Assim que for aprovado por nossa equipe, ele será exibido
+                    publicamente. Você receberá atualizações sobre o status em seu e-mail.</p>
+            </div>
+            <div class="mt-6">
+                <button id="close-modal-button" type="button"
+                    class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#0c2b7a] text-base font-medium text-white hover:bg-[#1e40af] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e40af] sm:text-sm">
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Elementos do DOM
+            const modal = document.getElementById('confirmation-modal');
+            const closeModalButton = document.getElementById('close-modal-button');
+
+            // --- Funções do Modal ---
+            const openModal = () => modal.classList.remove('hidden');
+            const closeModal = () => modal.classList.add('hidden');
+
+            if (closeModalButton) closeModalButton.addEventListener('click', closeModal);
+            if (modal) modal.addEventListener('click', (event) => {
+                if (event.target === modal) closeModal();
+            });
+
+            // --- Funções dos Formulários de Comentário ---
+            document.querySelectorAll('section').forEach(section => {
+                const addCommentContainer = section.querySelector('.add-comment-container');
+                const addCommentButton = section.querySelector('.add-comment-button');
+                const newCommentForm = section.querySelector('form');
+                const cancelCommentButton = section.querySelector('.cancel-comment-button');
+                const commentTextarea = section.querySelector('textarea');
+
+                const showForm = () => {
+                    if (addCommentContainer) addCommentContainer.classList.add('hidden');
+                    if (newCommentForm) newCommentForm.classList.remove('hidden');
+                    if (commentTextarea) commentTextarea.focus();
+                };
+
+                const hideForm = () => {
+                    if (newCommentForm) newCommentForm.classList.add('hidden');
+                    if (addCommentContainer) addCommentContainer.classList.remove('hidden');
+                    if (commentTextarea) commentTextarea.value = ''; // Limpa o campo
+                };
+
+                if (addCommentButton) addCommentButton.addEventListener('click', showForm);
+                if (cancelCommentButton) cancelCommentButton.addEventListener('click', hideForm);
+
+                if (newCommentForm) {
+                    newCommentForm.addEventListener('submit', (event) => {
+                        event.preventDefault();
+                        if (commentTextarea && commentTextarea.value.trim() === '') {
+                            alert('Por favor, escreva um comentário.');
+                            return;
+                        }
+                        hideForm();
+                        openModal();
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
