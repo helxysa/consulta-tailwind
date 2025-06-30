@@ -43,35 +43,30 @@
     <main class="max-w-5xl mx-auto py-12 px-4 sm:px-8">
         <!-- Breadcrumb -->
         <nav aria-label="Breadcrumb" class="mb-6">
-            <ol class="flex items-center gap-2 text-sm">
-                <li><a href="consulta-tela.html" class="text-gray-500 hover:text-[#0c2b7a]">Início</a></li>
+            <ol id="breadcrumb" class="flex items-center gap-2 text-sm">
+                <li><a href="index.html" class="text-gray-500 hover:text-[#0c2b7a]">Início</a></li>
                 <li><span class="text-gray-400">/</span></li>
-                <li><a href="consulta-tela.html" class="text-gray-500 hover:text-[#0c2b7a]">Consultas Públicas</a></li>
-                <li><span class="text-gray-400">/</span></li>
-                <li class="text-gray-700 font-medium">Plano Municipal de Mobilidade Urbana</li>
+                <li id="breadcrumb-consulta-name" class="text-gray-700 font-medium">Carregando...</li>
             </ol>
         </nav>
 
         <!-- Título e Descrição da Consulta -->
-        <h1 class="text-3xl font-bold mb-4 text-gray-800">Plano Municipal de Mobilidade Urbana</h1>
-        <p class="mb-6 text-lg text-gray-600">Participe da construção do novo plano de mobilidade urbana para tornar a
-            cidade mais acessível e sustentável.</p>
+        <h1 id="consulta-title" class="text-3xl font-bold mb-4 text-gray-800">Carregando...</h1>
+        <p id="consulta-description" class="mb-6 text-lg text-gray-600">Carregando...</p>
 
         <!-- Metadados da Consulta -->
         <div class="mb-10 flex flex-wrap gap-x-8 gap-y-2 text-sm text-gray-500">
-            <div><span class="font-semibold text-gray-700">Unidade Responsável:</span> Secretaria de Mobilidade Urbana
-            </div>
-            <div><span class="font-semibold text-gray-700">Categoria:</span> Transporte</div>
-            <div><span class="font-semibold text-gray-700">Período:</span> 01/07/2024 a 31/07/2024</div>
+            <div id="consulta-responsible-unit"><span class="font-semibold text-gray-700">Unidade Responsável:</span>
+                Carregando...</div>
+            <div id="consulta-category"><span class="font-semibold text-gray-700">Categoria:</span> Carregando...</div>
+            <div id="consulta-period"><span class="font-semibold text-gray-700">Período:</span> Carregando...</div>
         </div>
 
         <!-- Lista de Perguntas da Consulta -->
         <div class="mb-10 border-t border-b border-gray-200 py-6">
             <h3 class="text-base font-semibold text-gray-800 mb-3">Perguntas em discussão nesta consulta:</h3>
-            <ul class="list-decimal list-outside pl-5 space-y-2 text-gray-600 text-sm">
-                <li>O que você acha desta proposta?</li>
-                <li>Como podemos melhorar?</li>
-                <li>Você tem sugestões adicionais?</li>
+            <ul id="consulta-questions-list" class="list-decimal list-outside pl-5 space-y-2 text-gray-600 text-sm">
+                <li>Carregando...</li>
             </ul>
         </div>
 
@@ -86,9 +81,8 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="text-sm font-medium text-gray-800 mb-1">Documento de Referência</p>
-                    <p class="text-xs text-gray-600 mb-3">Acesse o documento completo para obter mais informações sobre
-                        esta consulta pública.</p>
+                    <p id="document-title" class="text-sm font-medium text-gray-800 mb-1">Carregando...</p>
+                    <p id="document-description" class="text-xs text-gray-600 mb-3">Carregando...</p>
                     <button
                         class="text-sm bg-white border border-gray-300 rounded px-4 py-1 hover:bg-gray-100 transition font-medium text-gray-700">
                         Baixar Documento
@@ -99,134 +93,9 @@
 
         <!-- Seção de Perguntas -->
         <h2 class="text-2xl font-bold mb-8 text-[#0c2b7a]">Perguntas da Consulta Pública</h2>
-        <div class="space-y-12">
-            <!-- Pergunta 1 -->
-            <section>
-                <div class="border-l-4 border-[#1e40af] pl-4 mb-6">
-                    <div class="text-sm font-medium text-[#1e40af]">Pergunta 1</div>
-                    <div class="text-xl font-bold text-gray-800">O que você acha desta proposta?</div>
-                </div>
-
-                <!-- Respostas -->
-                <div class="space-y-5 ml-4 sm:ml-8">
-                    <!-- Resposta Maria -->
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="flex-shrink-0 h-9 w-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-medium text-sm mt-1">
-                            M</div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-700 text-sm">Maria Silva</span>
-                                <span class="text-xs text-gray-400">30 de junho de 2025 às 12:54</span>
-                            </div>
-                            <div class="bg-gray-100 rounded-md px-4 py-2 mt-1 text-gray-800 border border-gray-200/80">
-                                É uma boa iniciativa.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Resposta João -->
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="flex-shrink-0 h-9 w-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-medium text-sm mt-1">
-                            J</div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-700 text-sm">João Souza</span>
-                                <span class="text-xs text-gray-400">01 de julho de 2025 às 09:15</span>
-                            </div>
-                            <div class="bg-gray-100 rounded-md px-4 py-2 mt-1 text-gray-800 border border-gray-200/80">
-                                Tenho dúvidas.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulário para Novo Comentário (Oculto) -->
-                <form id="new-comment-form-1" class="hidden mt-6 ml-4 sm:ml-8">
-                    <label for="comment-textarea-1" class="block text-sm font-medium text-gray-700 mb-2">Seu
-                        comentário</label>
-                    <textarea id="comment-textarea-1" class="w-full p-2 border border-gray-300 rounded-md text-sm"
-                        rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
-                    <div class="flex justify-end gap-2 mt-2">
-                        <button type="button"
-                            class="cancel-comment-button text-sm text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 font-medium">Cancelar</button>
-                        <button type="submit"
-                            class="submit-comment-button text-sm bg-[#0c2b7a] text-white px-5 py-2 rounded-md hover:bg-[#1e40af] font-medium">Enviar
-                            Comentário</button>
-                    </div>
-                </form>
-
-                <!-- Botão para Adicionar Comentário -->
-                <div class="add-comment-container mt-6 ml-4 sm:ml-8 border-t pt-4">
-                    <button class="add-comment-button text-[#1e40af] hover:underline text-sm font-semibold">
-                        Comentar
-                    </button>
-                </div>
-            </section>
-
-            <!-- Pergunta 2 -->
-            <section>
-                <div class="border-l-4 border-[#1e40af] pl-4 mb-6">
-                    <div class="text-sm font-medium text-[#1e40af]">Pergunta 2</div>
-                    <div class="text-xl font-bold text-gray-800">Como podemos melhorar?</div>
-                </div>
-                <!-- Respostas -->
-                <div class="space-y-5 ml-4 sm:ml-8">
-                    <div class="italic text-gray-500 text-sm">Nenhum comentário ainda.</div>
-                </div>
-                <!-- Formulário para Novo Comentário (Oculto) -->
-                <form id="new-comment-form-2" class="hidden mt-6 ml-4 sm:ml-8">
-                    <label for="comment-textarea-2" class="block text-sm font-medium text-gray-700 mb-2">Seu
-                        comentário</label>
-                    <textarea id="comment-textarea-2" class="w-full p-2 border border-gray-300 rounded-md text-sm"
-                        rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
-                    <div class="flex justify-end gap-2 mt-2">
-                        <button type="button"
-                            class="cancel-comment-button text-sm text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 font-medium">Cancelar</button>
-                        <button type="submit"
-                            class="submit-comment-button text-sm bg-[#0c2b7a] text-white px-5 py-2 rounded-md hover:bg-[#1e40af] font-medium">Enviar
-                            Comentário</button>
-                    </div>
-                </form>
-                <!-- Botão para Adicionar Comentário -->
-                <div class="add-comment-container mt-6 ml-4 sm:ml-8 border-t pt-4">
-                    <button class="add-comment-button text-[#1e40af] hover:underline text-sm font-semibold">
-                        Comentar
-                    </button>
-                </div>
-            </section>
-
-            <!-- Pergunta 3 -->
-            <section>
-                <div class="border-l-4 border-[#1e40af] pl-4 mb-6">
-                    <div class="text-sm font-medium text-[#1e40af]">Pergunta 3</div>
-                    <div class="text-xl font-bold text-gray-800">Você tem sugestões adicionais?</div>
-                </div>
-                <!-- Respostas -->
-                <div class="space-y-5 ml-4 sm:ml-8">
-                    <div class="italic text-gray-500 text-sm">Nenhum comentário ainda.</div>
-                </div>
-                <!-- Formulário para Novo Comentário (Oculto) -->
-                <form id="new-comment-form-3" class="hidden mt-6 ml-4 sm:ml-8">
-                    <label for="comment-textarea-3" class="block text-sm font-medium text-gray-700 mb-2">Seu
-                        comentário</label>
-                    <textarea id="comment-textarea-3" class="w-full p-2 border border-gray-300 rounded-md text-sm"
-                        rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
-                    <div class="flex justify-end gap-2 mt-2">
-                        <button type="button"
-                            class="cancel-comment-button text-sm text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 font-medium">Cancelar</button>
-                        <button type="submit"
-                            class="submit-comment-button text-sm bg-[#0c2b7a] text-white px-5 py-2 rounded-md hover:bg-[#1e40af] font-medium">Enviar
-                            Comentário</button>
-                    </div>
-                </form>
-                <!-- Botão para Adicionar Comentário -->
-                <div class="add-comment-container mt-6 ml-4 sm:ml-8 border-t pt-4">
-                    <button class="add-comment-button text-[#1e40af] hover:underline text-sm font-semibold">
-                        Comentar
-                    </button>
-                </div>
-            </section>
+        <div id="questions-section" class="space-y-12">
+            <!-- As perguntas serão inseridas aqui dinamicamente -->
+            <div class="text-center text-gray-500">Carregando perguntas...</div>
         </div>
     </main>
 
@@ -256,11 +125,158 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Elementos do DOM
-            const modal = document.getElementById('confirmation-modal');
-            const closeModalButton = document.getElementById('close-modal-button');
+            // Dados simulados que viriam de um backend/API
+            const consultationsData = {
+                '1': {
+                    title: 'Plano Municipal de Mobilidade Urbana',
+                    description: 'Participe da construção do novo plano de mobilidade urbana para tornar a cidade mais acessível e sustentável.',
+                    responsibleUnit: 'Secretaria de Mobilidade Urbana',
+                    category: 'Transporte',
+                    period: '01/07/2024 a 31/07/2024',
+                    document: {
+                        title: 'Documento de Referência',
+                        description: 'Acesse o documento completo para obter mais informações sobre esta consulta pública.'
+                    },
+                    questions: [
+                        {
+                            id: 1,
+                            title: 'O que você acha desta proposta?',
+                            comments: [
+                                { name: 'Maria Silva', initial: 'M', date: '30 de junho de 2025 às 12:54', text: 'É uma boa iniciativa.' },
+                                { name: 'João Souza', initial: 'J', date: '01 de julho de 2025 às 09:15', text: 'Tenho dúvidas.' }
+                            ]
+                        },
+                        { id: 2, title: 'Como podemos melhorar?', comments: [] },
+                        { id: 3, title: 'Você tem sugestões adicionais?', comments: [] }
+                    ]
+                },
+                '2': {
+                    title: 'Revisão do Plano Diretor',
+                    description: 'Contribua com a revisão do Plano Diretor para o desenvolvimento ordenado da nossa cidade.',
+                    responsibleUnit: 'Secretaria de Planejamento Urbano',
+                    category: 'Urbanismo',
+                    period: '15/07/2024 a 15/08/2024',
+                    document: {
+                        title: 'Minuta do Plano Diretor',
+                        description: 'Consulte a minuta da proposta de revisão do Plano Diretor.'
+                    },
+                    questions: [
+                        {
+                            id: 1,
+                            title: 'Quais são os principais desafios da cidade?',
+                            comments: [
+                                { name: 'Ana Costa', initial: 'A', date: '16 de julho de 2025 às 10:00', text: 'Acho que o transporte público é o maior desafio.' }
+                            ]
+                        },
+                        { id: 2, title: 'Que áreas devem ser priorizadas?', comments: [] }
+                    ]
+                },
+                '3': {
+                    title: 'Orçamento Participativo 2025',
+                    description: 'Decida onde os recursos públicos devem ser aplicados no próximo ano.',
+                    responsibleUnit: 'Secretaria da Fazenda',
+                    category: 'Finanças Públicas',
+                    period: '01/08/2024 a 31/08/2024',
+                    document: {
+                        title: 'Proposta Orçamentária',
+                        description: 'Veja a proposta inicial de alocação de recursos para 2025.'
+                    },
+                    questions: [
+                        { id: 1, title: 'Qual área você considera prioritária para investimentos?', comments: [] },
+                        { id: 2, title: 'Você tem alguma sugestão de projeto específico?', comments: [] }
+                    ]
+                }
+            };
+
+            // Função para buscar o parâmetro 'id' da URL
+            const getQueryParam = (param) => {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            };
+
+            // Função para carregar os dados da consulta na página
+            const loadConsultationData = (id) => {
+                const data = consultationsData[id];
+
+                if (!data) {
+                    document.getElementById('consulta-title').textContent = 'Consulta não encontrada';
+                    document.getElementById('consulta-description').textContent = 'O ID fornecido não corresponde a nenhuma consulta disponível.';
+                    document.querySelector('main').innerHTML = '<h1 class="text-2xl font-bold text-center">Consulta não encontrada</h1>';
+                    return;
+                }
+
+                // Atualiza o Breadcrumb
+                document.title = `${data.title} - Detalhes da Consulta`;
+                document.getElementById('breadcrumb-consulta-name').textContent = data.title;
+
+
+                // Atualiza o cabeçalho da consulta
+                document.getElementById('consulta-title').textContent = data.title;
+                document.getElementById('consulta-description').textContent = data.description;
+                document.getElementById('consulta-responsible-unit').innerHTML = `<span class="font-semibold text-gray-700">Unidade Responsável:</span> ${data.responsibleUnit}`;
+                document.getElementById('consulta-category').innerHTML = `<span class="font-semibold text-gray-700">Categoria:</span> ${data.category}`;
+                document.getElementById('consulta-period').innerHTML = `<span class="font-semibold text-gray-700">Período:</span> ${data.period}`;
+
+                // Atualiza a lista de perguntas no topo
+                const questionsList = document.getElementById('consulta-questions-list');
+                questionsList.innerHTML = '';
+                data.questions.forEach(q => {
+                    questionsList.innerHTML += `<li>${q.title}</li>`;
+                });
+
+                // Atualiza o box de documento
+                document.getElementById('document-title').textContent = data.document.title;
+                document.getElementById('document-description').textContent = data.document.description;
+
+                // Renderiza as seções de perguntas e respostas
+                const questionsSection = document.getElementById('questions-section');
+                questionsSection.innerHTML = ''; // Limpa o conteúdo de "carregando"
+                data.questions.forEach((question, index) => {
+                    const questionIndex = index + 1;
+                    const commentsHtml = question.comments.length > 0 ?
+                        question.comments.map(comment => `
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 h-9 w-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-medium text-sm mt-1">${comment.initial}</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-medium text-gray-700 text-sm">${comment.name}</span>
+                                        <span class="text-xs text-gray-400">${comment.date}</span>
+                                    </div>
+                                    <div class="bg-gray-100 rounded-md px-4 py-2 mt-1 text-gray-800 border border-gray-200/80">${comment.text}</div>
+                                </div>
+                            </div>
+                        `).join('') :
+                        '<div class="italic text-gray-500 text-sm">Nenhum comentário ainda.</div>';
+
+                    const questionHtml = `
+                        <section data-question-id="${question.id}">
+                            <div class="border-l-4 border-[#1e40af] pl-4 mb-6">
+                                <div class="text-sm font-medium text-[#1e40af]">Pergunta ${questionIndex}</div>
+                                <div class="text-xl font-bold text-gray-800">${question.title}</div>
+                            </div>
+                            <div class="space-y-5 ml-4 sm:ml-8">${commentsHtml}</div>
+                            <form id="new-comment-form-${questionIndex}" class="hidden mt-6 ml-4 sm:ml-8">
+                                <label for="comment-textarea-${questionIndex}" class="block text-sm font-medium text-gray-700 mb-2">Seu comentário</label>
+                                <textarea id="comment-textarea-${questionIndex}" class="w-full p-2 border border-gray-300 rounded-md text-sm" rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
+                                <div class="flex justify-end gap-2 mt-2">
+                                    <button type="button" class="cancel-comment-button text-sm text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 font-medium">Cancelar</button>
+                                    <button type="submit" class="submit-comment-button text-sm bg-[#0c2b7a] text-white px-5 py-2 rounded-md hover:bg-[#1e40af] font-medium">Enviar Comentário</button>
+                                </div>
+                            </form>
+                            <div class="add-comment-container mt-6 ml-4 sm:ml-8 border-t pt-4">
+                                <button class="add-comment-button text-[#1e40af] hover:underline text-sm font-semibold">Comentar</button>
+                            </div>
+                        </section>`;
+                    questionsSection.innerHTML += questionHtml;
+                });
+
+                // Re-inicializa os event listeners para os formulários recém-criados
+                initializeCommentForms();
+            };
 
             // --- Funções do Modal ---
+            const modal = document.getElementById('confirmation-modal');
+            const closeModalButton = document.getElementById('close-modal-button');
             const openModal = () => modal.classList.remove('hidden');
             const closeModal = () => modal.classList.add('hidden');
 
@@ -270,40 +286,52 @@
             });
 
             // --- Funções dos Formulários de Comentário ---
-            document.querySelectorAll('section').forEach(section => {
-                const addCommentContainer = section.querySelector('.add-comment-container');
-                const addCommentButton = section.querySelector('.add-comment-button');
-                const newCommentForm = section.querySelector('form');
-                const cancelCommentButton = section.querySelector('.cancel-comment-button');
-                const commentTextarea = section.querySelector('textarea');
+            const initializeCommentForms = () => {
+                document.querySelectorAll('#questions-section section').forEach(section => {
+                    const addCommentContainer = section.querySelector('.add-comment-container');
+                    const addCommentButton = section.querySelector('.add-comment-button');
+                    const newCommentForm = section.querySelector('form');
+                    const cancelCommentButton = section.querySelector('.cancel-comment-button');
+                    const commentTextarea = section.querySelector('textarea');
 
-                const showForm = () => {
-                    if (addCommentContainer) addCommentContainer.classList.add('hidden');
-                    if (newCommentForm) newCommentForm.classList.remove('hidden');
-                    if (commentTextarea) commentTextarea.focus();
-                };
+                    const showForm = () => {
+                        if (addCommentContainer) addCommentContainer.classList.add('hidden');
+                        if (newCommentForm) newCommentForm.classList.remove('hidden');
+                        if (commentTextarea) commentTextarea.focus();
+                    };
 
-                const hideForm = () => {
-                    if (newCommentForm) newCommentForm.classList.add('hidden');
-                    if (addCommentContainer) addCommentContainer.classList.remove('hidden');
-                    if (commentTextarea) commentTextarea.value = ''; // Limpa o campo
-                };
+                    const hideForm = () => {
+                        if (newCommentForm) newCommentForm.classList.add('hidden');
+                        if (addCommentContainer) addCommentContainer.classList.remove('hidden');
+                        if (commentTextarea) commentTextarea.value = '';
+                    };
 
-                if (addCommentButton) addCommentButton.addEventListener('click', showForm);
-                if (cancelCommentButton) cancelCommentButton.addEventListener('click', hideForm);
+                    if (addCommentButton) addCommentButton.addEventListener('click', showForm);
+                    if (cancelCommentButton) cancelCommentButton.addEventListener('click', hideForm);
 
-                if (newCommentForm) {
-                    newCommentForm.addEventListener('submit', (event) => {
-                        event.preventDefault();
-                        if (commentTextarea && commentTextarea.value.trim() === '') {
-                            alert('Por favor, escreva um comentário.');
-                            return;
-                        }
-                        hideForm();
-                        openModal();
-                    });
-                }
-            });
+                    if (newCommentForm) {
+                        newCommentForm.addEventListener('submit', (event) => {
+                            event.preventDefault();
+                            if (commentTextarea && commentTextarea.value.trim() === '') {
+                                alert('Por favor, escreva um comentário.');
+                                return;
+                            }
+                            hideForm();
+                            openModal();
+                        });
+                    }
+                });
+            };
+
+            // --- Inicialização ---
+            const consultationId = getQueryParam('id');
+            if (consultationId) {
+                loadConsultationData(consultationId);
+            } else {
+                document.getElementById('consulta-title').textContent = 'Nenhuma consulta selecionada';
+                document.getElementById('consulta-description').textContent = 'Por favor, selecione uma consulta na página inicial.';
+                document.getElementById('questions-section').innerHTML = '';
+            }
         });
     </script>
 </body>
