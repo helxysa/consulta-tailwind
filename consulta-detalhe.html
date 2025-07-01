@@ -33,7 +33,6 @@
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="index.html"
                         class="text-gray-700 hover:text-[#0c2b7a] transition font-medium">Consultas Públicas</a>
-                    <a href="#" class="text-gray-700 hover:text-[#0c2b7a] transition font-medium">Sobre</a>
                 </nav>
             </div>
         </div>
@@ -123,6 +122,12 @@
         </div>
     </div>
 
+    <footer class="bg-gray-100 border-t mt-16">
+        <div class="max-w-6xl mx-auto py-6 px-4 text-center text-gray-600 text-sm">
+            <p>&copy; 2024 Ministério Público do Estado do Amapá. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Dados simulados que viriam de um backend/API
@@ -185,6 +190,94 @@
                         { id: 1, title: 'Qual área você considera prioritária para investimentos?', comments: [] },
                         { id: 2, title: 'Você tem alguma sugestão de projeto específico?', comments: [] }
                     ]
+                },
+                '4': {
+                    title: 'Criação de Parques e Áreas de Lazer',
+                    description: 'Opine sobre a criação de novos parques e a revitalização de áreas de lazer em diversos bairros. Queremos criar mais espaços verdes para o bem-estar e a convivência.',
+                    responsibleUnit: 'Secretaria de Meio Ambiente',
+                    category: 'Lazer e Meio Ambiente',
+                    period: '20/08/2024 a 20/09/2024',
+                    document: {
+                        title: 'Proposta de Novas Áreas Verdes',
+                        description: 'Confira o estudo preliminar com as localidades sugeridas para novos parques.'
+                    },
+                    questions: [
+                        {
+                            id: 1,
+                            title: 'Qual a sua opinião sobre as localidades propostas para os novos parques?',
+                            comments: [
+                                { name: 'Carlos Andrade', initial: 'C', date: '21 de agosto de 2025 às 14:30', text: 'Acho a localização do Parque Zona Norte excelente!' },
+                                { name: 'Beatriz Pereira', initial: 'B', date: '22 de agosto de 2025 às 10:15', text: 'Seria ótimo ter mais bancos e bebedouros.' },
+                                { name: 'Roberto Lima', initial: 'R', date: '22 de agosto de 2025 às 11:00', text: 'A proposta é boa, mas precisa de um plano de segurança.' },
+                                { name: 'Juliana Costa', initial: 'J', date: '23 de agosto de 2025 às 09:45', text: 'Poderiam incluir uma área para cães.' },
+                                { name: 'Lucas Martins', initial: 'L', date: '23 de agosto de 2025 às 17:20', text: 'Acessibilidade para cadeirantes precisa ser prioridade.' }
+                            ]
+                        },
+                        { id: 2, title: 'Que tipo de equipamentos de lazer você gostaria de ver nestes espaços?', comments: [] }
+                    ]
+                },
+                '5': {
+                    title: 'Melhorias na Iluminação Pública',
+                    description: 'A sua segurança é nossa prioridade. Contribua com sugestões de locais que necessitam de melhorias na iluminação pública, visando um ambiente urbano mais seguro.',
+                    responsibleUnit: 'Secretaria de Obras e Serviços',
+                    category: 'Segurança e Infraestrutura',
+                    period: '01/09/2024 a 30/09/2024',
+                    document: {
+                        title: 'Mapeamento de Pontos Críticos',
+                        description: 'Acesse o mapa com os pontos que já foram identificados como prioritários pela equipe técnica.'
+                    },
+                    questions: [
+                        {
+                            id: 1,
+                            title: 'Você concorda com os pontos mapeados como prioritários?',
+                            comments: [
+                                { name: 'Fernanda Lima', initial: 'F', date: '02 de setembro de 2025 às 08:00', text: 'Concordo, mas adicionaria a rua X e a avenida Y.' },
+                                { name: 'Ricardo Alves', initial: 'R', date: '02 de setembro de 2025 às 10:30', text: 'A iluminação perto da escola municipal está muito fraca.' },
+                                { name: 'Paula Nunes', initial: 'P', date: '03 de setembro de 2025 às 19:00', text: 'O uso de lâmpadas de LED seria mais econômico e eficiente.' },
+                                { name: 'Gustavo Borges', initial: 'G', date: '04 de setembro de 2025 às 11:10', text: 'É importante focar nas paradas de ônibus também.' },
+                                { name: 'Helena Santos', initial: 'H', date: '04 de setembro de 2025 às 15:00', text: 'A praça central está completamente às escuras à noite.' },
+                                { name: 'Vinicius Melo', initial: 'V', date: '05 de setembro de 2025 às 20:45', text: 'Além de iluminar, é preciso podar as árvores que cobrem os postes.' },
+                                { name: 'Camila Ribeiro', initial: 'C', date: '06 de setembro de 2025 às 13:25', text: 'As áreas periféricas precisam de mais atenção.' },
+                                { name: 'André Ferreira', initial: 'A', date: '07 de setembro de 2025 às 18:50', text: 'Ótima iniciativa! Segurança em primeiro lugar.' }
+                            ]
+                        },
+                        { id: 2, title: 'Existem outros locais que você considera que necessitam de iluminação urgente?', comments: [] }
+                    ]
+                },
+                '6': {
+                    title: 'Programa de Incentivo à Cultura Local',
+                    description: 'Sua visão ajudará a fortalecer a identidade cultural da nossa região, apoiando artistas e projetos que enriquecem a vida da comunidade.',
+                    responsibleUnit: 'Fundação de Cultura',
+                    category: 'Cultura',
+                    period: '10/09/2024 a 10/10/2024',
+                    document: {
+                        title: 'Edital do Programa de Incentivo',
+                        description: 'Leia a minuta do edital e contribua com sugestões para os critérios de seleção e categorias.'
+                    },
+                    questions: [
+                        {
+                            id: 1,
+                            title: 'O que você acha dos critérios de avaliação propostos no edital?',
+                            comments: [
+                                { name: 'Mariana Oliveira', initial: 'M', date: '11 de setembro de 2025 às 11:20', text: 'Os critérios estão claros, mas poderiam incluir uma categoria para cultura popular.' },
+                                { name: 'Fábio Costa', initial: 'F', date: '11 de setembro de 2025 às 14:00', text: 'Deveria haver mais incentivo para o teatro amador.' },
+                                { name: 'Larissa Dias', initial: 'L', date: '12 de setembro de 2025 às 09:30', text: 'Acho importante valorizar o artesanato local.' },
+                                { name: 'Pedro Henrique', initial: 'P', date: '12 de setembro de 2025 às 16:55', text: 'A burocracia para inscrever projetos precisa ser menor.' },
+                                { name: 'Sofia Pereira', initial: 'S', date: '13 de setembro de 2025 às 10:10', text: 'E o apoio a bandas e músicos independentes?' },
+                                { name: 'Bruno Gomes', initial: 'B', date: '13 de setembro de 2025 às 18:00', text: 'Seria bom ter workshops e oficinas de capacitação.' },
+                                { name: 'Clara Martins', initial: 'C', date: '14 de setembro de 2025 às 11:45', text: 'A descentralização dos eventos culturais para os bairros é fundamental.' },
+                                { name: 'Daniel Souza', initial: 'D', date: '14 de setembro de 2025 às 20:00', text: 'O valor do incentivo poderia ser maior.' },
+                                { name: 'Eduarda Rocha', initial: 'E', date: '15 de setembro de 2025 às 13:15', text: 'O edital deveria prever contrapartidas sociais dos projetos aprovados.' },
+                                { name: 'Gabriel Almeida', initial: 'G', date: '15 de setembro de 2025 às 17:30', text: 'A prestação de contas é muito complexa para artistas pequenos.' },
+                                { name: 'Isabela Lima', initial: 'I', date: '16 de setembro de 2025 às 08:50', text: 'Concordo com a colega, a cultura popular precisa de mais espaço.' },
+                                { name: 'José Santos', initial: 'J', date: '16 de setembro de 2025 às 12:00', text: 'Onde está o fomento à literatura e poesia?' },
+                                { name: 'Laura Azevedo', initial: 'L', date: '17 de setembro de 2025 às 15:25', text: 'O prazo de inscrição é muito curto.' },
+                                { name: 'Miguel Ferreira', initial: 'M', date: '17 de setembro de 2025 às 19:10', text: 'Ótima iniciativa! Apoio totalmente.' },
+                                { name: 'Natália Barbosa', initial: 'N', date: '18 de setembro de 2025 às 21:00', text: 'A comissão julgadora deveria ter membros da sociedade civil.' }
+                            ]
+                        },
+                        { id: 2, title: 'Quais manifestações culturais você acredita que deveriam receber mais apoio?', comments: [] }
+                    ]
                 }
             };
 
@@ -231,11 +324,15 @@
                 // Renderiza as seções de perguntas e respostas
                 const questionsSection = document.getElementById('questions-section');
                 questionsSection.innerHTML = ''; // Limpa o conteúdo de "carregando"
+                const commentsThreshold = 3;
+
                 data.questions.forEach((question, index) => {
                     const questionIndex = index + 1;
-                    const commentsHtml = question.comments.length > 0 ?
-                        question.comments.map(comment => `
-                            <div class="flex items-start gap-4">
+
+                    let commentsHtml = '';
+                    if (question.comments.length > 0) {
+                        commentsHtml = question.comments.map((comment, commentIndex) => `
+                            <div class="flex items-start gap-4 ${commentIndex >= commentsThreshold ? 'hidden' : ''}" data-comment>
                                 <div class="flex-shrink-0 h-9 w-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-medium text-sm mt-1">${comment.initial}</div>
                                 <div class="flex-1">
                                     <div class="flex items-center justify-between">
@@ -245,8 +342,20 @@
                                     <div class="bg-gray-100 rounded-md px-4 py-2 mt-1 text-gray-800 border border-gray-200/80">${comment.text}</div>
                                 </div>
                             </div>
-                        `).join('') :
-                        '<div class="italic text-gray-500 text-sm">Nenhum comentário ainda.</div>';
+                        `).join('');
+                    } else {
+                        commentsHtml = '<div class="italic text-gray-500 text-sm">Nenhum comentário ainda.</div>';
+                    }
+
+                    let showMoreButtonHtml = '';
+                    if (question.comments.length > commentsThreshold) {
+                        showMoreButtonHtml = `
+                        <div class="ml-4 sm:ml-8 mt-4">
+                            <button class="show-more-button text-sm font-medium text-[#0c2b7a] hover:underline" data-question-id="${question.id}">
+                                Mostrar mais ${question.comments.length - commentsThreshold} comentários
+                            </button>
+                        </div>`;
+                    }
 
                     const questionHtml = `
                         <section data-question-id="${question.id}">
@@ -255,6 +364,7 @@
                                 <div class="text-xl font-bold text-gray-800">${question.title}</div>
                             </div>
                             <div class="space-y-5 ml-4 sm:ml-8">${commentsHtml}</div>
+                            ${showMoreButtonHtml}
                             <form id="new-comment-form-${questionIndex}" class="hidden mt-6 ml-4 sm:ml-8">
                                 <label for="comment-textarea-${questionIndex}" class="block text-sm font-medium text-gray-700 mb-2">Seu comentário</label>
                                 <textarea id="comment-textarea-${questionIndex}" class="w-full p-2 border border-gray-300 rounded-md text-sm" rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
@@ -270,8 +380,9 @@
                     questionsSection.innerHTML += questionHtml;
                 });
 
-                // Re-inicializa os event listeners para os formulários recém-criados
+                // Re-inicializa os event listeners para os formulários e botões recém-criados
                 initializeCommentForms();
+                initializeShowMoreButtons();
             };
 
             // --- Funções do Modal ---
@@ -285,7 +396,25 @@
                 if (event.target === modal) closeModal();
             });
 
-            // --- Funções dos Formulários de Comentário ---
+            // --- Funções dos Formulários de Comentário e Botão "Mostrar Mais" ---
+            const initializeShowMoreButtons = () => {
+                document.querySelectorAll('.show-more-button').forEach(button => {
+                    // Prevenir múltiplos listeners
+                    if (button.dataset.listenerAttached) return;
+                    button.dataset.listenerAttached = 'true';
+                    
+                    button.addEventListener('click', (event) => {
+                        const questionSection = event.target.closest('section');
+                        if (questionSection) {
+                            questionSection.querySelectorAll('[data-comment].hidden').forEach(comment => {
+                                comment.classList.remove('hidden');
+                            });
+                            event.target.closest('div').remove(); // Remove o container do botão "Mostrar mais"
+                        }
+                    });
+                });
+            };
+
             const initializeCommentForms = () => {
                 document.querySelectorAll('#questions-section section').forEach(section => {
                     const addCommentContainer = section.querySelector('.add-comment-container');
