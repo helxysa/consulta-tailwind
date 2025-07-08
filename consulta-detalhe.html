@@ -14,6 +14,13 @@
             font-family: 'Poppins', sans-serif;
             background-color: #ffffff;
         }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     </style>
 </head>
 
@@ -144,7 +151,7 @@
     <!-- Modal de Comentário (Oculto) -->
     <div id="comment-modal"
         class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-lg shadow-xl p-6 sm:p-8 max-w-4xl mx-auto w-full">
+        <div class="bg-white rounded-lg shadow-xl p-6 sm:p-8 max-w-6xl mx-auto w-full max-h-[95vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="text-xl leading-6 font-bold text-gray-900">Deixe seu Comentário</h3>
                 <button id="close-comment-modal-button" type="button" class="text-gray-400 hover:text-gray-600">
@@ -156,14 +163,60 @@
                 </button>
             </div>
 
+            <!-- Informações da Consulta -->
+            <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-md">
+                <div class="flex items-center justify-between mb-2">
+                    <h4 id="modal-consultation-title" class="font-bold text-gray-900 text-lg">Título da Consulta</h4>
+                    <button id="toggle-consultation-details" type="button"
+                        class="text-blue-600 hover:text-blue-800 focus:outline-none">
+                        <svg id="expand-icon" class="h-5 w-5 transform transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="consultation-details" class="hidden">
+                    <div class="text-sm text-gray-700 mb-3">
+                        <p id="modal-consultation-description">Descrição da consulta...</p>
+                    </div>
+                    <div class="border-t border-blue-200 pt-3">
+                        <h5 class="font-medium text-gray-800 mb-2">Perguntas da consulta:</h5>
+                        <ol id="modal-questions-list"
+                            class="list-decimal list-outside pl-5 space-y-1 text-sm text-gray-700">
+                            <!-- Perguntas serão inseridas aqui -->
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
             <div class="mb-4 p-3 bg-gray-50 border border-gray-200 rounded-md">
-                <p class="text-sm text-gray-600">Respondendo à pergunta:</p>
-                <p id="modal-question-text" class="font-semibold text-gray-800"></p>
+                <div class="flex items-center justify-between">
+                    <p class="text-sm text-gray-600">Respondendo à pergunta:</p>
+                    <button id="toggle-question-details" type="button"
+                        class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg id="question-expand-icon" class="h-4 w-4 transform transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="question-details">
+                    <p id="modal-question-text" class="font-semibold text-gray-800 mt-1"></p>
+                </div>
             </div>
 
             <form id="comment-form">
+                <div>
+                    <label for="comment-text" class="block text-sm font-medium text-gray-700">Seu comentário</label>
+                    <textarea id="comment-text" name="comment" rows="7" required
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#1e40af] focus:border-[#1e40af] sm:text-sm"
+                        placeholder="Escreva seu comentário aqui..."></textarea>
+                </div>
                 <input type="hidden" id="question-id-input" name="questionId">
                 <div class="space-y-4">
+                    <div></div>
                     <div>
                         <label for="comment-name" class="block text-sm font-medium text-gray-700">Nome Completo</label>
                         <input type="text" id="comment-name" name="name" required
@@ -180,12 +233,7 @@
                         <input type="tel" id="comment-phone" name="phone"
                             class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#1e40af] focus:border-[#1e40af] sm:text-sm">
                     </div>
-                    <div>
-                        <label for="comment-text" class="block text-sm font-medium text-gray-700">Seu comentário</label>
-                        <textarea id="comment-text" name="comment" rows="7" required
-                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#1e40af] focus:border-[#1e40af] sm:text-sm"
-                            placeholder="Escreva seu comentário aqui..."></textarea>
-                    </div>
+
 
                     <div class="mt-4 p-3 border rounded-md bg-gray-50 flex items-center justify-between">
                         <div class="flex items-center gap-3">
@@ -550,10 +598,67 @@
 
             const openCommentModal = (questionId, questionText) => {
                 if (commentModal) {
+                    const consultationId = getQueryParam('id');
+                    const data = consultationsData[consultationId];
+
                     questionIdInput.value = questionId;
                     modalQuestionText.textContent = questionText;
+
+                    // Preenche as informações da consulta
+                    document.getElementById('modal-consultation-title').textContent = data.title;
+                    document.getElementById('modal-consultation-description').textContent = data.description;
+
+                    // Preenche a lista de perguntas
+                    const modalQuestionsList = document.getElementById('modal-questions-list');
+                    modalQuestionsList.innerHTML = '';
+                    data.questions.forEach((q, index) => {
+                        const li = document.createElement('li');
+                        li.textContent = q.title;
+                        if (q.id == questionId) {
+                            li.classList.add('font-semibold', 'text-blue-600');
+                        }
+                        modalQuestionsList.appendChild(li);
+                    });
+
+                    // Controla a visibilidade dos dropdowns baseado no tamanho do conteúdo
+                    setupDropdownVisibility(data.description, questionText);
+
                     commentModal.classList.remove('hidden');
                     document.getElementById('comment-name').focus();
+                }
+            };
+
+            const setupDropdownVisibility = (description, questionText) => {
+                const consultationDetails = document.getElementById('consultation-details');
+                const questionDetails = document.getElementById('question-details');
+                const toggleConsultationBtn = document.getElementById('toggle-consultation-details');
+                const toggleQuestionBtn = document.getElementById('toggle-question-details');
+                const expandIcon = document.getElementById('expand-icon');
+                const questionExpandIcon = document.getElementById('question-expand-icon');
+
+                // Limite de caracteres para mostrar dropdown (ajustável)
+                const descriptionLimit = 200;
+                const questionLimit = 100;
+
+                // Controla dropdown da descrição da consulta
+                if (description.length > descriptionLimit) {
+                    toggleConsultationBtn.style.display = 'block';
+                    consultationDetails.classList.add('hidden');
+                } else {
+                    toggleConsultationBtn.style.display = 'none';
+                    consultationDetails.classList.remove('hidden');
+                }
+
+                // Controla dropdown da pergunta
+                if (questionText.length > questionLimit) {
+                    toggleQuestionBtn.style.display = 'block';
+                    // Adiciona classe para truncar texto
+                    const questionTextEl = document.getElementById('modal-question-text');
+                    questionTextEl.classList.add('line-clamp-2');
+                } else {
+                    toggleQuestionBtn.style.display = 'none';
+                    const questionTextEl = document.getElementById('modal-question-text');
+                    questionTextEl.classList.remove('line-clamp-2');
                 }
             };
 
@@ -562,6 +667,22 @@
                     commentModal.classList.add('hidden');
                     commentForm.reset();
                     resetRecaptcha();
+
+                    // Reset dropdowns
+                    const consultationDetails = document.getElementById('consultation-details');
+                    const expandIcon = document.getElementById('expand-icon');
+                    const questionTextEl = document.getElementById('modal-question-text');
+                    const questionExpandIcon = document.getElementById('question-expand-icon');
+
+                    if (consultationDetails) {
+                        consultationDetails.classList.add('hidden');
+                        if (expandIcon) expandIcon.style.transform = 'rotate(0deg)';
+                    }
+
+                    if (questionTextEl) {
+                        questionTextEl.classList.remove('line-clamp-2');
+                        if (questionExpandIcon) questionExpandIcon.style.transform = 'rotate(0deg)';
+                    }
                 }
             };
 
@@ -570,6 +691,40 @@
             if (commentModal) commentModal.addEventListener('click', (event) => {
                 if (event.target === commentModal) closeCommentModal();
             });
+
+            // Event listeners para os dropdowns
+            const toggleConsultationDetails = document.getElementById('toggle-consultation-details');
+            const toggleQuestionDetails = document.getElementById('toggle-question-details');
+
+            if (toggleConsultationDetails) {
+                toggleConsultationDetails.addEventListener('click', () => {
+                    const consultationDetails = document.getElementById('consultation-details');
+                    const expandIcon = document.getElementById('expand-icon');
+
+                    if (consultationDetails.classList.contains('hidden')) {
+                        consultationDetails.classList.remove('hidden');
+                        expandIcon.style.transform = 'rotate(180deg)';
+                    } else {
+                        consultationDetails.classList.add('hidden');
+                        expandIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+
+            if (toggleQuestionDetails) {
+                toggleQuestionDetails.addEventListener('click', () => {
+                    const questionTextEl = document.getElementById('modal-question-text');
+                    const questionExpandIcon = document.getElementById('question-expand-icon');
+
+                    if (questionTextEl.classList.contains('line-clamp-2')) {
+                        questionTextEl.classList.remove('line-clamp-2');
+                        questionExpandIcon.style.transform = 'rotate(180deg)';
+                    } else {
+                        questionTextEl.classList.add('line-clamp-2');
+                        questionExpandIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
 
             // Handle reCAPTCHA click
             if (recaptchaControl) {
